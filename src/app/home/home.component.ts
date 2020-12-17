@@ -20,7 +20,9 @@ export class HomeComponent {
   }
 
   private generateAnimationStyle(event: any): string {
-    const transition = `transition: top ${this.transitionTime}ms, left ${this.transitionTime}ms;`;
+    const transition =
+      `transition: top ${this.transitionTime}ms ease-in-out, ` +
+      `left ${this.transitionTime}ms ease-in-out;`;
     const left = `left:${event.x}px;`;
     const right = `top:${event.y - 72}px;`;
     return `${transition} ${left} ${right}`;
