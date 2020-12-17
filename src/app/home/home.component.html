@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="input-zone">
+  <form class="example-form">
+    <mat-form-field floatLabel="always"
+      class="example-full-width">
+      <mat-label>Transition time (miliseconds)</mat-label>
+      <input [(ngModel)]="transitionTime"
+        type="number"
+        matInput
+        [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  </form>
+</div>
+<div class="animation-zone"
+  (click)="moveBoxToHere($event)">
+  <div class="the-box"
+    #theBox></div>
+</div>
