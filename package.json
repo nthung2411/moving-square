@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod": "ng build --prod",
     "install-puppeteer": "cd node_modules/puppeteer && npm run install",
     "test": "npm run install-puppeteer && ng test",
     "test-ci": "npm run install-puppeteer && ng test --no-watch --no-progress --code-coverage",

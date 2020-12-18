@@ -18,7 +18,7 @@ steps:
 - task: Npm@1
   inputs:
     command: custom
-    customCommand: run build --prod
+    customCommand: run build-prod
   displayName: 'Build'
 
 # - task: Npm@1
@@ -48,4 +48,4 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'moving-square'
     SlotName: 'production'
-    packageForLinux: 'www/'
+    packageForLinux: 'dist/moving-square/'
