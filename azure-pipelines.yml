@@ -27,17 +27,17 @@ steps:
 #     customCommand: run test-ci
 #   displayName: 'Test with coverage'
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TESTS-*.xml'
-    mergeTestResults: true
-    failTaskOnFailedTests: true
+# - task: PublishTestResults@2
+#   inputs:
+#     testResultsFormat: 'JUnit'
+#     testResultsFiles: '**/TESTS-*.xml'
+#     mergeTestResults: true
+#     failTaskOnFailedTests: true
 
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '**/cobertura-coverage.xml'
+# - task: PublishCodeCoverageResults@1
+#   inputs:
+#     codeCoverageTool: 'Cobertura'
+#     summaryFileLocation: '**/cobertura-coverage.xml'
 
 - task: AzureRmWebAppDeployment@4
   inputs:
