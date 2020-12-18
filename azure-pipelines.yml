@@ -43,9 +43,12 @@ steps:
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Pay-As-You-Go (d6a4c45c-86db-4898-b05c-ee5daf6a1c3b)'
-    appType: 'webApp'
+    appType: 'webAppLinux'
     WebAppName: 'moving-square'
     deployToSlotOrASE: true
     ResourceGroupName: 'moving-square'
     SlotName: 'production'
     packageForLinux: 'dist/moving-square/'
+    RuntimeStack: 'NODE|14-lts'
+    StartupCommand: 'npm run start'
+
