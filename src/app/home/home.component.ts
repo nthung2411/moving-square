@@ -23,7 +23,7 @@ export class HomeComponent implements AfterViewInit {
 
   public moveBoxToHere(event: any) {
     const transitionParams = {
-      x: event.x - 50,
+      x: event.x - 8,
       y: event.y - 72
     }
     this.doMoveBoxAnimation(transitionParams);

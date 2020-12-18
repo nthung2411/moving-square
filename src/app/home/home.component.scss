@@ -1,4 +1,5 @@
 .home-content {
+  margin: 0 8px;
 
   .input-zone {
     min-width: 300px;
@@ -45,8 +46,6 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .home-content {
-    margin: 8px;
-
     .animation-zone {
       height: 320px;
     }
@@ -56,8 +55,6 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .home-content {
-    margin: 0 16px;
-
     .animation-zone {
       height: 320px;
     }
@@ -67,8 +64,6 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .home-content {
-    margin: 0 16px;
-
     .animation-zone {
       height: 500px;
     }
@@ -78,8 +73,6 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .home-content {
-    margin: 0 48px;
-
     .animation-zone {
       height: 500px;
     }
@@ -89,8 +82,6 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .home-content {
-    margin: 0 48px;
-
     .animation-zone {
       height: 500px;
     }
