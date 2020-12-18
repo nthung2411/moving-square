@@ -21,11 +21,11 @@ steps:
     customCommand: run build --prod
   displayName: 'Build'
 
-- task: Npm@1
-  inputs:
-    command: custom
-    customCommand: run test-ci
-  displayName: 'Test with coverage'
+# - task: Npm@1
+#   inputs:
+#     command: custom
+#     customCommand: run test-ci
+#   displayName: 'Test with coverage'
 
 - task: PublishTestResults@2
   inputs:
