@@ -4,7 +4,6 @@ import {
   ElementRef,
   ViewChild
 } from '@angular/core';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,7 +23,7 @@ export class HomeComponent implements AfterViewInit {
 
   public moveBoxToHere(event: any) {
     const transitionParams = {
-      x: event.x,
+      x: event.x - 50,
       y: event.y - 72
     }
     this.doMoveBoxAnimation(transitionParams);

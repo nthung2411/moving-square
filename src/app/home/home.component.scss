@@ -1,34 +1,98 @@
-.input-zone {
-  min-width: 300px;
-  max-width: 500px;
-  margin: 16px 8px 0;
+.home-content {
 
-  .example-form {
-    min-width: 100px;
-    max-width: 200px;
-    width: 100%;
+  .input-zone {
+    min-width: 300px;
+    max-width: 500px;
+    margin: 16px 8px 0;
 
-    mat-label {
-      color: #000000;
+    .example-form {
+      min-width: 100px;
+      max-width: 200px;
+      width: 100%;
+
+      mat-label {
+        color: #000000;
+      }
+    }
+
+    .example-full-width {
+      width: 100%;
     }
   }
 
-  .example-full-width {
+  .animation-zone {
     width: 100%;
+    border: 1px dashed #000000;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .the-box {
+      width: 50px;
+      height: 50px;
+      background: #000000;
+      position: absolute;
+    }
+
+    .placeholder {
+      color: #ccc9c9;
+    }
   }
 }
 
-.animation-zone {
-  width: 100%;
-  height: 500px;
-  min-height: 300px;
-  border: 1px dashed #000000;
-  position: relative;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .home-content {
+    margin: 8px;
 
-  .the-box {
-    width: 50px;
-    height: 50px;
-    background: #000000;
-    position: absolute;
+    .animation-zone {
+      height: 320px;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .home-content {
+    margin: 0 16px;
+
+    .animation-zone {
+      height: 320px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .home-content {
+    margin: 0 16px;
+
+    .animation-zone {
+      height: 500px;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .home-content {
+    margin: 0 48px;
+
+    .animation-zone {
+      height: 500px;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .home-content {
+    margin: 0 48px;
+
+    .animation-zone {
+      height: 500px;
+    }
   }
 }
