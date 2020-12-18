@@ -1,48 +1,58 @@
-module.exports = function (config) {
-  const puppeteer = require('puppeteer');
-  process.env.CHROME_BIN = puppeteer.executablePath();
+module.exports = function(config) {
+    const puppeteer = require('puppeteer');
+    process.env.CHROME_BIN = puppeteer.executablePath();
 
-  config.set({
-    basePath: '',
-    frameworks: ['jasmine', '@angular-devkit/build-angular'],
-    plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-junit-reporter'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma')
-    ],
-    client: {
-      jasmine: {
-        // you can add configuration options for Jasmine here
-        // the possible options are listed at https://jasmine.github.io/api/edge/Configuration.html
-        // for example, you can disable the random execution with `random: false`
-        // or set a specific seed with `seed: 4321`
-      },
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
-    },
-    jasmineHtmlReporter: {
-      suppressAll: true // removes the duplicated traces
-    },
-    coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/moving-square'),
-      subdir: '.',
-      reporters: [{
-          type: 'html'
+    config.set({
+        basePath: '',
+        frameworks: ['jasmine', '@angular-devkit/build-angular'],
+        plugins: [
+            require('karma-jasmine'),
+            require('karma-chrome-launcher'),
+            require('karma-junit-reporter'),
+            require('karma-jasmine-html-reporter'),
+            require('karma-coverage'),
+            require('@angular-devkit/build-angular/plugins/karma')
+        ],
+        client: {
+            jasmine: {
+                // you can add configuration options for Jasmine here
+                // the possible options are listed at https://jasmine.github.io/api/edge/Configuration.html
+                // for example, you can disable the random execution with `random: false`
+                // or set a specific seed with `seed: 4321`
+            },
+            clearContext: false // leave Jasmine Spec Runner output visible in browser
         },
-        {
-          type: 'text-summary'
-        }
-      ]
-    },
-    reporters: ['progress', 'kjhtml'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
-    restartOnFileChange: true
-  });
+        jasmineHtmlReporter: {
+            suppressAll: true // removes the duplicated traces
+        },
+        coverageReporter: {
+            dir: require('path').join(__dirname, './coverage/moving-square'),
+            subdir: '.',
+            reporters: [{
+                    type: 'html'
+                },
+                {
+                    type: 'text-summary'
+                }
+            ]
+        },
+        reporters: ['progress', 'kjhtml'],
+        port: 9876,
+        colors: true,
+        logLevel: config.LOG_INFO,
+        autoWatch: true,
+        browsers: ['Chrome'],
+        singleRun: false,
+        restartOnFileChange: true,
+        customLaunchers: {
+            ChromeHeadlessCI: {
+                base: 'ChromeHeadless',
+                flags: ['--no-sandbox']
+            }
+        },
+        browserDisconnectTimeout: 10000, // default 2000
+        browserDisconnectTolerance: 1, // default 0
+        browserNoActivityTimeout: 4 * 60 * 1000, //default 10000
+        captureTimeout: 4 * 60 * 1000 //default 60000
+    });
 };
